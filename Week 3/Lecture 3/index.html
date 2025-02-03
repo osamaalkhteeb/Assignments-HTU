@@ -1,20 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <form>
+      <label for="fname">First Name</label><br />
+      <input
+        type="text"
+        name="fname"
+        id="fname"
+        placeholder="Please enter a first name"
+        required
+      /><br /><br />
 
+      <label for="lname">Last Name</label><br />
+      <input
+        type="text"
+        name="lname"
+        id="lname"
+        placeholder="Please enter a Last name"
+        required
+      /><br /><br />
+      <label for="age">Age</label><br />
+      <input type="number" id="age" name="age" /><br /><br />
+      <label for="birthdate">Birthdate</label><br />
+      <input
+        type="date"
+        id="birthdate"
+        name="birthdate"
+        max="2025-02-03"
+        required
+      /><br /><br />
 
+      <label for="email">Email</label><br />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Please enter an email"
+        required
+      /><br /><br />
 
+      <label for="password">Password</label><br />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        required
+        minlength="8"
+      /><br /><br />
 
+      <label for="radiobtn">Radio Button</label><br />
+      <input type="radio" name="gender" id="gender" value="0" checked />Male
+      <br />
+      <input type="radio" name="gender" id="gander" value="1" />Female
+      <br /><br />
 
+      <label for="checkbox">Skills</label><br />
+      <input type="checkbox" name="skills" id="football" value="0" /> Football
+      <br />
+      <input type="checkbox" name="skills" id="swimming" value="1" />
+      Swimming<br />
+      <input type="checkbox" name="skills" id="cooding" value="2" /> Codding
+      <br />
+      <input type="checkbox" name="skills" id="baseball" value="3" /> Baseball
+      <br />
+      <input type="checkbox" name="skills" id="basketball" value="4" />
+      Basketball <br /><br />
 
+      <select name="country" id="country" multiple>
+        <option value="jo">Jordan</option>
+        <option value="usa">United State</option>
+        <option value="Uk" selected>United Kingdom</option>
+        <option value="ksa">Saudi Arabia</option>
+        <option value="uae">United Arab Emirates</option>
+      </select>
+      <br /><br />
+      <input list="countries" />
+      <datalist name="countries" id="countries">
+        <option value="jo" selected>Jordan</option>
+        <option value="usa">United State</option>
+        <option value="Uk">United Kingdom</option>
+        <option value="ksa">Saudi Arabia</option>
+        <option value="uae">United Arab Emirates</option>
+      </datalist>
+      <br /><br />
 
-
-
-</body>
+      <input type="submit" value="Save" />
+    </form>
+  </body>
 </html>
