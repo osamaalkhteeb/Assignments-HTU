@@ -1,0 +1,17 @@
+
+
+#home{
+background-image:url(jinx.jpg);
+background-attachment: scroll;
+background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+#about{
+    background-image:url(vi.jpg) ;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
