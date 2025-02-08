@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="frame-src 'self' https://www.youtube.com;"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- header / main / fotter / nav = they have the same css-->
+    <header style="padding: 20x; background: black; font-size: large">
+      <nav>
+        <a href="#home" style="color: #bbb; margin: 0 15px; text-decoration: none;">Home</a>
+        <a href="#about" style="color: #bbb; margin: 0 15px; text-decoration: none;">About</a>
+        <a href="signup.html" target="_blank" color: #bbb; margin: 0 15px; text-decoration: none;">Signup</a>
+    </nav>
+    </header>
+    <main>
+      <section
+        id="home"
+        style="
+          text-align: center;
+          background-color: #111;
+          color: white;
+          padding: 20px;
+        "
+      >
+        <!-- section and div are the same -->
+        <h1>Arcane</h1>
+
+        <img src="pic1.jpg" alt="Arcanelogo" /><br />
+        <video width="560" height="315" controls>
+          <source src="vid1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/VSrQi92AvF8?si=L9GkYh8DbvU2w0NL"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <h2>A Song of Pain and Power</h2>
+        <p>
+          "What Have They Done to Us" Perfectly captures the emotional depth of
+          "Arcane" Season 2. A haunting melody that echoes the struggles,
+          betrayals, and unbreakable bonds its characters
+        </p>
+      </section>
+      <section
+        id="about"
+        style="
+          text-align: center;
+          background-color: #222;
+          color: white;
+          padding: 20px;
+        "
+      >
+        <h1>The Sisters of Zaun</h1>
+        <img src="pic2.jpg" alt="Jinx and Vi" /> <br>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/ojqThSyGdeA?si=871AwIeedF4hLpq6"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <h2>A Bond Broken By War</h2>
+        <p> Jinx and Vi—once inseparable, now divided by pain and destiny.  
+            *Arcane* tells the heartbreaking story of these two sisters, shaped by the chaos of Piltover and Zaun.</p>
+            <table border="1" style="margin: auto; border-collapse: collapse; width: 80%; max-width: 500px;">
+                <tr style="background-color: #444;">
+                    <th style="padding: 10px;">Character</th>
+                    <th style="padding: 10px;">Personality</th>
+                    <th style="padding: 10px;">Fighting Style</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">Jinx</td>
+                    <td style="padding: 10px;">Chaotic, unpredictable</td>
+                    <td style="padding: 10px;">Explosives, minigun</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">Vi</td>
+                    <td style="padding: 10px;">Determined, protective</td>
+                    <td style="padding: 10px;">Gauntlets, brawler</td>
+                </tr>
+            </table>
+      </section>
+    </main>
+    <footer><p style="font-size: 1.2em;">&copy; 2025 Arcane Fan Page. All Rights Reserved.</p>
+
+        
+        <nav>
+            <a href="#home" style="color: #bbb; margin: 0 15px; text-decoration: none;">Home</a>
+            <a href="#about" style="color: #bbb; margin: 0 15px; text-decoration: none;">About</a>
+            <a href="signup.html" target="_blank" color: #bbb; margin: 0 15px; text-decoration: none;">Signup</a>
+        </nav>
+    </footer>
+  </body>
+</html>
