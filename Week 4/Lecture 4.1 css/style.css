@@ -1,0 +1,44 @@
+/* External styling (We use this) */
+
+
+h1 { /*calling this using the elemant*/
+  color: #ff0000;
+  background: #fffaf0;
+}
+h2 {
+  color: #c8ff00;
+}
+h3 , h4{ /* we can group them*/
+  color: #0000ff;
+}
+ 
+p {
+    /* all 4 gives the same colors */
+    color: blueviolet; /* don't use this*/
+    color: #892be2;
+    color: rgb(138, 43, 226);
+    color: rgba(138, 43, 226, 0.9); /* the 0.9 is for the transparency */
+    text-align: center;
+  }
+  .intro{  /*calling this using the class*/
+color: #3d0349;
+  }
+  #intro2{ /*calling this using the id*/
+color: #ff1493;
+  }
+
+  .blue{
+    color: blue
+  }
+  .bold_600{
+    font-weight: 600;
+  }
+
+  body{
+background: #808080;
+background-image: url(pic1.jpg);
+ background-repeat: no-repeat;  /* we use this to stop the background from repeating */
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
+  }
