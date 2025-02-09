@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.screen{
+ height: 100vh;
+    border: 3px solid #ff0000;
+}
+img{
+    border: 3px solid #0000ff;
+width: 40vw;
+
+}
+
+span{
+    border: 3px solid #800080;
+width: 60vw;
+}
