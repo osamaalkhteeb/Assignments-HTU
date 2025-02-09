@@ -1,0 +1,53 @@
+* {
+  margin: 0px; /*every time you start a website you use this to reset all the padding and margin to give you more freedom in conrtolling and styling*/
+  padding: 0px;
+  box-sizing: border-box; /* it makes the width fixed so if i say the width is 300px it will be 300px no matter what*/
+}
+p {
+  border-style: double;
+  border-width: 5px;
+  border-color: #8a2be2;
+  border-radius: 25px;
+  margin: 10px;
+  padding: 10px;
+  
+  /* border-top-style: dotted;
+    border-left-style: dotted; */
+
+  /* border: 1px solid #8a2be2;  called shorthand and you can use it instead of typing alot of properties*/
+  /* You can also use border-bottom for the bottom side and vice versa*/
+
+  text-align: center;
+  color: red;
+  text-decoration:unset;
+  letter-spacing: 12px;
+  line-height: 10px;
+  
+}
+h1 {
+  margin: 0px;
+}
+h2 {
+  margin: 0px;
+  padding: 10px;
+}
+
+.width{
+width: 300px;
+padding: 10px;
+    color: #8a2be2;
+}
+
+a{
+    
+    text-decoration: none;
+    background: skyblue;
+    border: 1px solid cyan;
+    border-radius: 20px;
+    padding: 16px;
+    margin: 40px;
+    text-align: center;
+    display: block;
+    height: 60px;
+    width: 150px;
+}
