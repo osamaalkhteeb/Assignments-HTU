@@ -1,0 +1,61 @@
+* {
+  padding: 10px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* this is the example solved by me*/
+
+header {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+.parent {
+  display: flex;
+  border: 1px solid blue;
+  flex-direction: row;
+  gap: 12px;
+  flex: 2;
+}
+.parent1 {
+  flex: 1;
+  border: 1px solid blue;
+}
+.child-1 {
+  border: 1px solid red;
+  height: 100px;
+  flex: 1;
+}
+.child-2 {
+  border: 1px solid red;
+  height: 100px;
+  flex: 1;
+}
+.child-3 {
+  border: 1px solid red;
+  height: 100px;
+  flex: 2;
+}
+.child-4 {
+  border: 1px solid red;
+  height: 50px;
+  flex: 1;
+}
+.child-5 {
+  border: 1px solid red;
+  height: 50px;
+  flex: 1;
+}
+.child-6 {
+  border: 1px solid red;
+  /* height: 100px; */
+  flex: 1;
+}
+.child-7 {
+  border: 1px solid red;
+  /* height: 100px; */
+  flex: 1;
+}
