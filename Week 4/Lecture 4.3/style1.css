@@ -1,0 +1,20 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  border: 1px solid blue;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+div {
+  border: 1px solid red;
+  height: 100px;
+  flex: 1; /* most important*/
+  /* flex-basis: 150px ; most important */
+}

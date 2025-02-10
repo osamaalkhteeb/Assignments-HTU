@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+/* This is the example solved by the instructer */
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+div {
+  padding: 8px;
+  border: 1px solid red;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-3 {
+  flex: 3;
+}

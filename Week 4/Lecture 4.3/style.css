@@ -1,0 +1,31 @@
+.flex {
+  display: flex;
+  border: 1px solid magenta;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: space-between; /* controlls all the conteent in the flex // end doesnt work anymore so we use flex-end*/
+  flex-wrap: wrap; /* when you make the window smaller and u want the elements go down u use wrap*/
+}
+
+img {
+  width: 100px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 16px;
+  justify-content: space-between; /* It works on the X axes (Row)*/
+  flex-wrap: wrap;
+  border: 2px solid black;
+  background-color: lightgray;
+  align-items: center; /* It works on the Y axes (Column)*/
+}
+
+nav {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
