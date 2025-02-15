@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+border: 1px solid black;
+height: 50px;
+padding: 0px 10px 0px 10px;
+}
+
+
+header img{
+    display: flex;
+    max-width: 150px;
+    flex: 1 1 150px;
+   
+}
+.searchbox{
+display: flex;
+height: 30px;
+background-color: black;
+border: 1px solid black;
+border-radius: 10px;
+flex: 1 1 100px;
+max-width: 500px;
+
+}
+.flexright{
+display: flex;
+gap: 10px;
+justify-content: center;
+align-items: center;
+
+}
+header button{
+    display: flex;
+    background-color: gray;
+    max-width: 100px;
+    height: 30px;
+    flex: 1 1 100px;
+    border: 1 solid black;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+.prof{
+    display: flex;
+    width: 50px;
+    max-width: 50px;
+    border: 1 solid black;
+    border-radius: 50px;
+    flex: 1 1 150px;
+}
+.parent {
+  display: flex;
+  height: 100vh;
+  gap: 10px;
+}
+
+.sidenav {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  flex-wrap: unset;
+  border: 1px solid red;
+}
+
+.litem {
+  display: flex;
+  border: 1px solid green;
+}
+
+.vid {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid blue;
+  flex: 1;
+}
+
+.item {
+  height: 100px;
+  background-color: brown;
+  flex: 1 1 150px;
+}
