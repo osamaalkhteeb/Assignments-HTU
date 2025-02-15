@@ -1,0 +1,29 @@
+*{margin:0;}
+
+.parent{
+
+
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid red;
+   
+}
+
+.item{
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    flex: 1 1 150px;
+   
+}
