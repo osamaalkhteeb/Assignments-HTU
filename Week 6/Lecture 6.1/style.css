@@ -1,0 +1,30 @@
+/* .Test3{
+        position: relative; stays at the same place he is between the other tags
+    top: 200px;
+    }
+    .Test2{
+        position: fixed; doesn't move from it's place even when u scroll
+    }
+    
+     */
+* {
+  margin: 0;
+}
+video {
+  opacity: 0.4;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+}
+
+.content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
