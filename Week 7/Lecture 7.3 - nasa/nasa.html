@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header class="bg-black text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="flex-grow: 0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Explore
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Home</a></li>
+                                <li><a class="dropdown-item" href="#">Missions</a></li>
+                                <li><a class="dropdown-item" href="#">Humans in space</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2 form-control-sm bg-black text-white" type="search" placeholder="Search" aria-label="Search" />
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex">
+                    <a class="navbar-brand" href="#">
+                        <img src="nasa.png" alt="Logo" width="60" />
+                    </a>
+                </div>
+                <div>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                News & Events
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">All Nasa News</a></li>
+                                <li><a class="dropdown-item" href="#">Video Series on Nasa+</a></li>
+                                <li><a class="dropdown-item" href="#">Podcasts</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Multimedia
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Nasa+</a></li>
+                                <li><a class="dropdown-item" href="#">Images</a></li>
+                                <li><a class="dropdown-item" href="#">Nasa Live</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white d-flex align-items-center" href="#">
+                                NASA+ <span class="badge bg-danger ms-2">LIVE</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="d-flex flex-column  bg-white border rounded shadow" style="padding: 48px 32px;">
+      <div class="mb-2">
+      <h4 class="fw-bold">LIVE Saturday, March 15, 9:45 p.m. EDT (0145 UTC)</h4>
+    </div>
+      <hr>
+      <div class="d-flex align-items-center flex-row ">
+
+        <!-- Image -->
+          <img src="pic2.webp" alt="Crew-10" class="rounded-circle me-3" width="60" height="60">
+          
+          <!-- Text Content (Title & Description) -->
+          <div class="d-flex flex-row flex-grow-1">
+            
+              <h2 class="fw-bold mb-1">NASA’s SpaceX Crew-10</h2>
+              <p class="mb-1">
+                  Coverage of the rendezvous, docking, hatch opening, and welcoming remarks of NASA’s SpaceX Crew-10 at the International Space Station.
+              </p>
+          </div>
+
+          <!-- Right Arrow Button -->
+          <a href="#" class="text-decoration-none">
+              <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                  →
+              </div>
+          </a>
+      </div>
+  </div>
+
+    <div class="hero-section position-relative text-white text-center" style="background: url('pic1.jpg') no-repeat center center/cover; min-height: 640px;">
+        <div class="d-flex flex-column justify-content-center align-items-center h-100 p-5 bg-dark bg-opacity-50">
+            <h1 class="fw-bold">NASA’s SpaceX Crew-10</h1>
+            <p class="lead">
+                The agency’s SpaceX Crew-10 mission launched to the International Space Station at 7:03 p.m. EDT Friday, March 14, 
+                from Launch Complex 39A at Kennedy Space Center in Florida.
+            </p>
+            <a href="#" class="btn btn-danger btn-lg">Mission Updates</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
