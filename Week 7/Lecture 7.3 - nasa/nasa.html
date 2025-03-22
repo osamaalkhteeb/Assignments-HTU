@@ -1,118 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NASA Homepage</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
-    
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header class="bg-black text-white">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="flex-grow: 0">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Explore
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Home</a></li>
-                                <li><a class="dropdown-item" href="#">Missions</a></li>
-                                <li><a class="dropdown-item" href="#">Humans in space</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <form class="d-flex" role="search">
-                                <input class="form-control me-2 form-control-sm bg-black text-white" type="search" placeholder="Search" aria-label="Search" />
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-                <div class="d-flex">
-                    <a class="navbar-brand" href="#">
-                        <img src="nasa.png" alt="Logo" width="60" />
-                    </a>
-                </div>
-                <div>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                News & Events
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">All Nasa News</a></li>
-                                <li><a class="dropdown-item" href="#">Video Series on Nasa+</a></li>
-                                <li><a class="dropdown-item" href="#">Podcasts</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Multimedia
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Nasa+</a></li>
-                                <li><a class="dropdown-item" href="#">Images</a></li>
-                                <li><a class="dropdown-item" href="#">Nasa Live</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white d-flex align-items-center" href="#">
-                                NASA+ <span class="badge bg-danger ms-2">LIVE</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse"
+            id="navbarSupportedContent"
+            style="flex-grow: 0"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Explore
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Home</a></li>
+                  <li><a class="dropdown-item" href="#">Missions</a></li>
+                  <li><a class="dropdown-item" href="#">Humans in space</a></li>
+                </ul>
+              </li>
+              <li>
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control me-2 form-control-sm bg-black text-white"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="d-flex">
+            <a class="navbar-brand" href="#">
+              <img src="nasa.png" alt="Logo" width="60" />
+            </a>
+          </div>
+          <div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  News & Events
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">All Nasa News</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Video Series on Nasa+</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Podcasts</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Multimedia
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Nasa+</a></li>
+                  <li><a class="dropdown-item" href="#">Images</a></li>
+                  <li><a class="dropdown-item" href="#">Nasa Live</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white d-flex align-items-center"
+                  href="#"
+                >
+                  NASA+ <span class="badge bg-danger ms-2">LIVE</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <!-- Hero Section -->
-    <div class="d-flex flex-column  bg-white border rounded shadow" style="padding: 48px 32px;">
+    <div
+      class="d-flex flex-column bg-white border rounded shadow"
+      style="padding: 48px 32px"
+    >
       <div class="mb-2">
-      <h4 class="fw-bold">LIVE Saturday, March 15, 9:45 p.m. EDT (0145 UTC)</h4>
-    </div>
-      <hr>
-      <div class="d-flex align-items-center flex-row ">
-
-        <!-- Image -->
-          <img src="pic2.webp" alt="Crew-10" class="rounded-circle me-3" width="60" height="60">
-          
-          <!-- Text Content (Title & Description) -->
-          <div class="d-flex flex-row flex-grow-1">
-            
-              <h2 class="fw-bold mb-1">NASA’s SpaceX Crew-10</h2>
-              <p class="mb-1">
-                  Coverage of the rendezvous, docking, hatch opening, and welcoming remarks of NASA’s SpaceX Crew-10 at the International Space Station.
-              </p>
-          </div>
-
-          <!-- Right Arrow Button -->
-          <a href="#" class="text-decoration-none">
-              <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                  →
-              </div>
-          </a>
+        <h4 class="fw-bold">
+          LIVE Saturday, March 15, 9:45 p.m. EDT (0145 UTC)
+        </h4>
       </div>
-  </div>
+      <hr />
+      <div class="d-flex align-items-center flex-row">
+        <!-- Image -->
+        <img
+          src="pic2.webp"
+          alt="Crew-10"
+          class="rounded-circle me-3"
+          width="60"
+          height="60"
+        />
 
-    <div class="hero-section position-relative text-white text-center" style="background: url('pic1.jpg') no-repeat center center/cover; min-height: 640px;">
-        <div class="d-flex flex-column justify-content-center align-items-center h-100 p-5 bg-dark bg-opacity-50">
-            <h1 class="fw-bold">NASA’s SpaceX Crew-10</h1>
-            <p class="lead">
-                The agency’s SpaceX Crew-10 mission launched to the International Space Station at 7:03 p.m. EDT Friday, March 14, 
-                from Launch Complex 39A at Kennedy Space Center in Florida.
-            </p>
-            <a href="#" class="btn btn-danger btn-lg">Mission Updates</a>
+        <!-- Text Content (Title & Description) -->
+        <div class="d-flex flex-row flex-grow-1">
+          <h2 class="fw-bold mb-1">NASA’s SpaceX Crew-10</h2>
+          <p class="mb-1">
+            Coverage of the rendezvous, docking, hatch opening, and welcoming
+            remarks of NASA’s SpaceX Crew-10 at the International Space Station.
+          </p>
         </div>
+
+        <!-- Right Arrow Button -->
+        <a href="#" class="text-decoration-none">
+          <div
+            class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center"
+            style="width: 40px; height: 40px"
+          >
+            →
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- Hero Section -->
+    <div
+      class="hero-section position-relative text-white"
+      style="
+        background: url('pic1.jpg') no-repeat center center/cover;
+        min-height: 640px;
+        position: relative;
+      "
+    >
+      <!-- Gradient Overlay -->
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100"
+        style="
+          background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0)
+          );
+        "
+      ></div>
+
+      <div
+        class="position-absolute top-50 start-0 translate-middle-y p-5 text-white"
+        style="max-width: 50%; z-index: 1"
+      >
+        <h1 class="fw-bold" style="font-size: 72px">NASA’s SpaceX Crew-10</h1>
+        <p class="lead fw-semibold" style="font-size: 16px">
+          The agency’s SpaceX Crew-10 mission launched to the International
+          Space Station at 7:03 p.m. EDT Friday, March 14, from Launch Complex
+          39A at Kennedy Space Center in Florida. The spacecraft docked to the
+          orbiting complex at 12:04 a.m. EDT on Sunday. March 16, while the
+          station was roughly 260 statute miles over Altantic Ocean.
+        </p>
+        <a href="#" class="btn btn-danger btn-lg">Mission Updates</a>
+      </div>
+      <!-- Navigation Section  -->
+      <div
+        class="position-absolute bottom-0 start-0 w-100 d-flex justify-content-between align-items-center p-4"
+        style="z-index: 2"
+      >
+        <nav class="d-flex gap-5 text-uppercase">
+          <div class="d-flex flex-column gap-2">
+            <hr />
+            <span class="small">Humans in Space</span>
+            <h4 class="fw-bold">Meet the Crew</h4>
+          </div>
+          <div class="d-flex flex-column gap-2">
+            <hr />
+            <span class="small">Expedition 73</span>
+            <h4 class="fw-bold">Space Station Science</h4>
+          </div>
+          <div class="d-flex flex-column gap-2">
+            <hr />
+            <span class="small">Commercial Crew Program</span>
+            <h4 class="fw-bold">Low-Earth Orbit</h4>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Featured News Section -->
+    <div class="container mt-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="fw-bold">Featured News</h2>
+        <a href="#" class="text-black text-decoration-none fw-semibold"
+          >Recently Published →</a
+        >
+      </div>
+
+      <div class="row g-3">
+        <!-- Big Main News (2x2) -->
+        <div class="col-md-6">
+          <div class="position-relative h-100">
+            <img
+              src="pic3.webp"
+              class="img-fluid rounded w-100 h-100 object-fit-cover"
+              alt="Main News"
+            />
+            <!-- Full overlay -->
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100"
+              style="background: rgba(0, 0, 0, 0.6)"
+            ></div>
+            <!-- Text on top -->
+            <div class="position-absolute bottom-0 p-3 text-white">
+              <small class="text-uppercase">News Release</small>
+              <h4 class="fw-bold">
+                NASA’s SpaceX Crew-10 Launches to International Space Station
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle Tall Image (1x2) -->
+        <div class="col-md-3">
+          <div class="position-relative h-100">
+            <img
+              src="pic4.webp"
+              class="img-fluid rounded w-100 h-100 object-fit-cover"
+              alt="Middle News"
+            />
+            <!-- Full overlay -->
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100"
+              style="background: rgba(0, 0, 0, 0.6)"
+            ></div>
+            <!-- Text on top -->
+            <div class="position-absolute bottom-0 p-3 text-white">
+              <small>4 MIN READ</small>
+              <h5>
+                NASA Cameras on Blue Ghost Capture First-of-its-Kind Moon
+                Landing Footage
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Two Stacked Images (1x1 each) -->
+        <div class="col-md-3">
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="position-relative">
+                <img
+                  src="pic5.png"
+                  class="img-fluid rounded w-100"
+                  alt="News"
+                />
+                <!-- Full overlay -->
+                <div
+                  class="position-absolute top-0 start-0 w-100 h-100"
+                  style="background: rgba(0, 0, 0, 0.6)"
+                ></div>
+                <!-- Text on top -->
+                <div class="position-absolute bottom-0 p-2 text-white">
+                  <small>4 MIN READ</small>
+                  <h6>
+                    NASA Atmospheric Wave-Studying Mission Releases Data from
+                    First 3,000 Orbits
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="position-relative">
+                <img
+                  src="pic6.webp"
+                  class="img-fluid rounded w-100"
+                  alt="News"
+                />
+                <!-- Full overlay -->
+                <div
+                  class="position-absolute top-0 start-0 w-100 h-100"
+                  style="background: rgba(0, 0, 0, 0.6)"
+                ></div>
+                <!-- Text on top -->
+                <div class="position-absolute bottom-0 p-2 text-white">
+                  <small>6 MIN READ</small>
+                  <h6>NASA Data Supports Everglades Restoration</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Small News Section -->
+      <div class="row mt-4 mb-5 text-center">
+        <!-- News Item 1 -->
+        <div class="col-md-3 d-flex align-items-center">
+          <img
+            src="small1.jpg"
+            class="rounded-circle me-2"
+            width="80"
+            height="80"
+          />
+          <div class="text-start">
+            <small class="text-uppercase">2 MIN READ</small>
+            <p class="fw-semibold mb-1">Hubble Sees a Spiral and a Star</p>
+            <span>ARTICLE</span>
+          </div>
+        </div>
+
+        <!-- News Item 2 -->
+        <div class="col-md-3 d-flex align-items-center">
+          <img
+            src="small2.webp"
+            class="rounded-circle me-2"
+            width="80"
+            height="80"
+          />
+          <div class="text-start">
+            <small class="text-uppercase">3 MIN READ</small>
+            <p class="fw-semibold mb-1">
+              NASA Analysis Shows Unexpected Amount of Sea Level Rise in 2024
+            </p>
+            <span>ARTICLE</span>
+          </div>
+        </div>
+
+        <!-- News Item 3 -->
+        <div class="col-md-3 d-flex align-items-center">
+          <img
+            src="small3.webp"
+            class="rounded-circle me-2"
+            width="80"
+            height="80"
+          />
+          <div class="text-start">
+            <small class="text-uppercase">4 MIN READ</small>
+            <p class="fw-semibold mb-1">
+              NASA Super Pressure Balloons Return to New Zealand
+            </p>
+            <span>ARTICLE</span>
+          </div>
+        </div>
+
+        <!-- News Item 4 -->
+        <div class="col-md-3 d-flex align-items-center">
+          <img
+            src="small4.jpg"
+            class="rounded-circle me-2"
+            width="80"
+            height="80"
+          />
+          <div class="text-start">
+            <small class="text-uppercase">5 MIN READ</small>
+            <p class="fw-semibold mb-1">
+              What’s Up: March 2025 Skywatching Tips
+            </p>
+            <span>ARTICLE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Background Image Section -->
+    <div
+      class="position-relative"
+      style="background: url('pic7.webp') center/cover no-repeat; height: 800px"
+    >
+    <div
+        class="position-absolute top-0 start-0 w-100 h-100"
+        style="
+          background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0)
+          );
+        "
+      ></div>
+
+      <div
+        class="position-absolute top-50 start-0 translate-middle-y p-5 text-white ms-5"
+        style="max-width: 40%; z-index: 1"
+      >
+        <h1 class="fw-bold mb-5" style="font-size: 72px">I Want My NASA TV!</h1>
+        <p class="lead fw-semibold" style="font-size: 16px">
+          For decades, NASA TV, and now NASA+, has been the gateway for the
+          world to witness historic space flight moments from the Apollo moon
+          landings to the shuttle era and today’s exciting programs. But what
+          does it take to capture and share the story of exploration with
+          audiences across the globe? Find out on the latest episode of Houston,
+          We Have a Podcast.
+        </p>
+        
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
