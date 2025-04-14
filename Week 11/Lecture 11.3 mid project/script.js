@@ -69,6 +69,14 @@ function showSection(sectionId){
         viewUsers();
     }
 }
+    // View swapping 
+    
+function toggleView(viewType) {
+    document.getElementById('tableSection').style.display = viewType === 'table' ? 'block' : 'none';
+    document.getElementById('cards-container').style.display = viewType === 'card' ? 'flex' : 'none';
+}
+
+toggleView('table'); // to prevent the two vieew from apearing when pressing preview 
 
         // Dto
     let userList=[]

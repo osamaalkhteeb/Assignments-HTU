@@ -56,6 +56,10 @@
 </section>
   <!-- Preview Section -->
     <section id="preview" class="tab-section container mt-5" style="display: none;">
+      <div class="mb-3">
+        <button class="btn btn-primary" onclick="toggleView('table')">Table View</button>
+        <button class="btn btn-primary" onclick="toggleView('card')">Card View</button>
+      </div>
       <!-- Table View -->
     <div id="tableSection">
       <table id="table" class="table table-bordered ">
@@ -85,7 +89,7 @@
     </div>
 
     <!-- Card View -->
-    <div id="cards-container"></div>
+    <div id="cards-container" class=""></div>
 
     </section>
 </body> 
