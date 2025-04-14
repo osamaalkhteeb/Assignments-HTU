@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <p id="par" class="title">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum
+      voluptatem id libero quasi dignissimos saepe. Temporibus nihil illo
+      quisquam aperiam maiores quia veniam quibusdam, repellendus illum
+      consectetur magni pariatur!
+    </p>
+
+    <p id="par" class="title" onmouseout="resetColor()" onmouseover="changeColor()">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum
+        voluptatem id libero quasi dignissimos saepe. Temporibus nihil illo
+        quisquam aperiam maiores quia veniam quibusdam, repellendus illum
+        consectetur magni pariatur!
+      </p>
+
+    <button onclick="changeText2()">Change Text</button> -->
+
+
+    <form onsubmit="return validateForm()">
+      <input type="text" placeholder="Full Name" id="fullname" name="fullname"/>
+      <p id="fullnameError" class="error"></p>
+  
+      <input type="email" placeholder="Email" id="email" name="email"/>
+      <p id="emailError" class="error"></p>
+  
+      <input type="password" placeholder="Password" id="password" name="password"/>
+      <p id="passwordError" class="error"></p>
+  
+      <input type="password" placeholder="Confirm Password" id="confirmPassword" name="confirmPassword"/>
+      <p id="confirmPasswordError" class="error"></p>
+  
+      <button type="submit">Save</button>
+    </form>
+  
+  </body>
+</html>
