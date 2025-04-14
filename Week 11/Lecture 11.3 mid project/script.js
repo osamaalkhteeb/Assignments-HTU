@@ -51,6 +51,8 @@ function validateForm(){
     return isValid;
 }
 
+
+    // For the diff sections
 function showSection(sectionId){
     document.getElementById('signup').style.display = sectionId === 'signup' ? 'block' : 'none';
     document.getElementById('preview').style.display = sectionId === 'preview' ? 'block' : 'none';
@@ -68,6 +70,7 @@ function showSection(sectionId){
     }
 }
 
+        // Dto
     let userList=[]
 
     class User{
@@ -106,7 +109,7 @@ function showSection(sectionId){
         alert("User added successfully");
     }
 
-
+    
     function viewUsers(){
         const table=document.getElementById('table').getElementsByTagName('tbody')[0];
         const cardsContainer = document.getElementById('cards-container');
@@ -157,7 +160,7 @@ function showSection(sectionId){
         card.className = "card";
     
         card.innerHTML = `
-            <h2>${user.name}</h2>
+            <h5>${user.name}</h5>
             <p><strong>Email:</strong> ${user.email}</p>
             <p><strong>Phone:</strong> ${user.phone}</p>
             <p><strong>Gender:</strong> ${user.gender}</p>
