@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header><h1>Blogs</h1></header>
+    <div class="main">
+    <form action="/new" method="post">
+        <label for="title">Title</label><br>
+        <input type="text" name="title" required><br>
+        <label for="content">Content</label><br>
+        <textarea name="content" rows="5" required></textarea><br>
+        <input type="submit" value="Post">
+    </form>
+<hr>
+    <h2>Posts</h2>
+    <div class="post">
+        <% if (posts.length === 0) { %>
+            <p>No posts dude.</p>
+            <% } else { %>
+                <% posts.forEach((post) => {  %>
+                <h2><%= post.title%></h2>
+                <p><%= post.content %></p>
+                
+                <% })}; %>
+    </div>
+</div>
+</body>
+</html>

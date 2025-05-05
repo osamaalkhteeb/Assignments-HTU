@@ -21,7 +21,7 @@ app.post("/submit",(req,res)=>{
     res.render('index.ejs',{
         name:name,
         cart:["item 1","item 2","item 3"],
-        content:"Niggers",
+        content:"xdd",
     });
     });
 
