@@ -14,6 +14,7 @@ let colors = [
   { name: "black", id: 7, value: "#000" },
 ];
 
+let lastId = 7;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/colors", (req, res) => {
@@ -39,8 +40,9 @@ app.get("/filter", (req, res) => {
 });
 
 app.post("/colors", (req, res) => {
+  lastId++;
   const newColor = {
-    id: colors.length + 1,
+    id: lastId,
     color: req.body.color,
     value: req.body.value,
   };
@@ -78,4 +80,21 @@ app.patch("/colors/:id", (req, res) => {
   res.json(updatedColor);
 });
 
+app.delete("/colors/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const colorIndex = colors.findIndex((color) => color.id === id);
+
+  if (colorIndex > -1) {
+    colors.splice(colorIndex, 1);
+    res.sendStatus(200);
+  }else{
+    res.status(404).json({ error: `Color ${id} not found` });
+  }
+});
+
+app.delete("/all", (req, res) => {
+  colors = [];
+  res.sendStatus(200);
+  
+});
 app.listen(port, () => {});
