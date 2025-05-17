@@ -1,0 +1,148 @@
+ *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+header, footer{
+    background-color: #333;
+    padding: 16px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+header a ,footer p{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px ;
+}
+header a:hover{
+    color: #4CAF50;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #f4f4f4;
+}
+
+
+main{
+    padding: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+h1,h2{
+    text-align: center;
+    margin-bottom: 16px;
+    color: #222;
+}
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+   padding: 20px;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+.post{
+background-color: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.post h3{
+    color: #444;
+    margin-bottom:8px ;
+}
+.post p{
+    margin-bottom: 16px;
+    color: #555;
+}
+input[type=submit]{
+    justify-content: flex-end;
+    margin: 8px 0;
+    gap: 10px;
+}
+.btn{
+    padding:6px 10px ;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3 ease;
+    width: 25%;
+}
+.btn.edit{
+    background-color: rgb(0, 0, 255);
+    color: #ffffff;
+}
+.btn.edit:hover{
+    background-color: rgb(23, 23, 143);
+}
+.btn.delete{
+    background-color: #f44336;
+    color: #ffffff;
+}
+.btn.delete:hover{
+    background-color: #d32f2f;
+}
+
+.form{
+    max-width: 600px;
+    margin: 32px auto;
+    padding:24px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.form label{
+    font-weight: bold;
+}
+.form h1 {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  input[type="text"],
+  textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  input[type="text"]:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #333;
+  }
+  
+  .btn.update,.btn.post {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn.update:hover,.btn.post:hover {
+    background-color: #0056b3;
+  }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <%- include('partials/header.ejs') %>
+<main>
+    <div class="container">
+        <!-- edit user -->
+      <h1><%= heading %></h1>
+      <% if (locals.user){ %>
+      <form id="editForm" method="post" action="/api/users/<%= user.id %>">
+        <input type="text" name="email" value="<%= user.email %>" />
+        <input type="text" name="name" value="<%= user.name %>" />
+        <input type="tel" name="phonenum" value="<%= user.phonenum %>">
+    <select id="gender" name="gender">
+        <option value="">--Select--</option>
+        <option value="Male" <%= user.gender ==='Male'? 'selected' : '' %>>Male</option>
+        <option value="Female" <%= user.gender ==='Female'? 'selected' : '' %>>Female</option>
+        <option value="Other" <%= user.gender ==='Other'? 'selected' : '' %>>Other</option>
+    </select>
+        <textarea name="address" rows="10"><%= user.address %></textarea>
+        <button class="btn update" type="submit"><%= submit %></button>
+      </form>
+
+      <% }else{ %>
+        <!-- new user -->
+        <form id="newUserForm" method="post" action="/api/users">
+        <input type="text" name="email" placeholder="Email" required />
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="tel" name="phonenum" placeholder="Phone Number" required />
+        <select id="gender" name="gender" required>
+            <option value="">--Select--</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <textarea
+        name="address"
+        placeholder="Address"
+        required
+        rows="10"
+      ></textarea>
+        <button class="btn create" type="submit"><%= submit %></button>
+      </form>
+      <% } %>
+    </div>
+  </main>
+    
+  <%- include('partials/footer.ejs') %>
+
+  </body>
+</html>
