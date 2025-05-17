@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <%- include('partials/header.ejs') %>
+    <main>
+      <h1>Welcome to the User</h1>
+
+      <h2>Users</h2>
+      <% if (users.length === 0) { %>
+      <p>All Users are dead.</p>
+      <% } else { %>
+
+        <!-- swapping between diff views -->
+        <button class="btn btn-primary" onclick="toggleView('table')">Table View</button>
+        <button class="btn btn-primary" onclick="toggleView('card')">Card View</button>
+
+        <!-- card view -->
+      <div class="users" id="cards-container">
+        <% users.forEach((user) => { %>
+        <div class="user">
+          <h3><%= user.email%></h3>
+          <small><%= user.name %></small>
+          <p><%= user.phonenum %></p>
+          <small><%= user.gender %></small>
+          <p><%= user.address %></p>
+          <form action="/api/users/delete/<%= user.id %>" method="get">
+            <input type="submit" value="Delete" class="btn delete" />
+          </form>
+          <form action="/edit/<%= user.id %>" method="get">
+            <input type="submit" value="Edit" class="btn edit" />
+          </form>
+        </div>
+      
+      <% }); %> </div>
+
+      <!-- table view -->
+      <div id="tableSection">
+        <table id="table" class="table table-bordered ">
+          <thead >
+            <tr>
+              <th>
+                Email
+              </th>
+              <th>
+                Name
+              </th>
+              <th>
+                Phone
+              </th>
+              <th>
+                Gender
+              </th>
+              <th>
+                Address
+              </th>
+            </tr>
+          </thead>
+          <!-- table body -->
+          <tbody>
+            <tr>
+            <% users.forEach((user) => { %>
+                <td><%= user.email%></td>
+          <td><%= user.name %></td>
+          <td><%= user.phonenum %></td>
+          <td><%= user.gender %></td>
+          <td><%= user.address %></td>
+          <td><form action="/api/users/delete/<%= user.id %>" method="get">
+            <input type="submit" value="Delete" class="btn delete" />
+          </form></td>
+          <td><form action="/edit/<%= user.id %>" method="get">
+            <input type="submit" value="Edit" class="btn edit" />
+          </form></td>
+        </tr>
+        <% }); %> 
+          </tbody>
+        </table>
+      </div>
+      <% }; %>
+    </main>
+    <%- include('partials/footer.ejs') %>
+    <script src="script/script.js"></script>
+  </body>
+</html>
