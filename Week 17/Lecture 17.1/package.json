@@ -1,0 +1,22 @@
+{
+  "name": "lecture-17.1",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "nodemon src/server.js",
+    "dev":"nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "pg": "^8.16.0"
+  }
+}
