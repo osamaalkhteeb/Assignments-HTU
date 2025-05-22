@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.main.container {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-tabs .nav-link {
+  font-weight: bold;
+  color: #495057;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #c39bcc;
+  color: white;
+  border: none;
+}
+
+.form-parent {
+  max-width: 500px;
+  margin: auto;
+}
+
+.form span {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #c39bcc;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form label {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s;
+}
+.form textarea {
+  height: 90px;
+  resize: none;
+}
+
+.form input:focus,
+.form select:focus,
+textarea:focus {
+  border-color: #c39bcc;
+  outline: none;
+}
+
+.form button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #c39bcc;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #8d6796;
+}
+
+.main-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-div {
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  text-align: center;
+}
+
+#card {
+  margin-top: 30px;
+}
+
+.card {
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: #c39bcc;
+  font-weight: bold;
+}
+
+#toggleViewBtn {
+  background-color: #c39bcc;
+  border: none;
+}
+#toggleViewBtn:hover {
+  background-color: #8d6796;
+}
