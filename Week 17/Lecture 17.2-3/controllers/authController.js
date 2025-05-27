@@ -1,5 +1,9 @@
 import UserModel from "../models/usersModels.js";
-import { loginSchema, registerSchema } from "../utils/validation.js";
+import {
+  loginSchema,
+  registerSchema,
+  changePasswordSchema,
+} from "../utils/validation.js";
 
 const AuthController = {
   async register(req, res, next) {
@@ -13,6 +17,9 @@ const AuthController = {
 
       const newUser = await UserModel.create({ email, password, name });
       const token = UserModel.generateToken(newUser.id);
+
+      req.session.userId = user.id; //why did we use user not newUser?
+      req.session.authenticated = true;
 
       res.status(201).json({
         success: true,
@@ -41,8 +48,18 @@ const AuthController = {
       const isMatch = await UserModel.verifyPassword(password, user.password);
       if (!isMatch) throw new Error("Invalid password");
 
+      // Create session
+      req.session.userId = user.id;
+      req.session.authenticated = true;
+
       const token = UserModel.generateToken(user.id);
 
+      res.cookie("token", token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        maxAge: 24 * 60 * 60 * 1000, // 1 day
+        sameSite: "strict",
+      });
       res.json({
         success: true,
         token: token,
@@ -56,15 +73,15 @@ const AuthController = {
       next(error);
     }
   },
-  
+
   async getMe(req, res, next) {
     try {
-      const user = await UserModel.findById(req.user.id);
+      const user = await UserModel.findById(req.user.id); // we get the req.user.id from the auth.js line 32
       if (!user) throw new Error("User not found");
-       res.json({
-        success:true,
+      res.json({
+        success: true,
         user,
-       })
+      });
     } catch (error) {
       next(error);
     }
@@ -96,7 +113,19 @@ const AuthController = {
       next(error);
     }
   },
- 
+
+  async logout(req, res, next) {
+    try {
+      req.session.destroy((err) => {
+        if (err) throw err;
+      });
+      res.clearCookies("token");
+      res.clearCookies("connect.sid");
+      res.json({ success: true, message: "Logged out successfully" });
+    } catch (error) {
+      next(error);
+    }
+  },
 };
 
 export default AuthController;

@@ -43,13 +43,14 @@ const UserModel = {
 
     return rows[0];
   },
+
  
-  generateToken(userId) {
+  generateToken(userId) { //static method
     return jwt.sign({ id: userId }, process.env.JWT_SECRET, {
       expiresIn: process.env.JWT_EXPIRES_IN || "1d",
     });
   },
-async  verifyPassword(password, hashedPassword) {
+async  verifyPassword(password, hashedPassword) { //instance  method
     return await bcrypt.compare(password, hashedPassword);
   },
 

@@ -5,6 +5,10 @@ import morgan from "morgan";
 import authRoutes from "./routes/authRoutes.js";
 import { notFound, errorHandler }from './middleware/error.js'
 import './config/db.js'
+import session from "express-session";
+import cookieParser from "cookie-parser";
+
+
 
 const app = express();
 
@@ -35,6 +39,23 @@ app.get('/health', (req, res) => res.json({ status: 'OK' }));
 app.use(notFound);
 app.use(errorHandler);
 
-app.use('/api/auth',authRoutes)
+
+
+
+app.use(cookieParser())
+
+app.use(session({
+  secret:process.env.SESSION_SECRET,
+  resave:false,
+  saveUninitialized:false,
+  cookie:{
+    secure: process.env.NODE_ENV === "production",
+    httpOnly:true,
+    maxAge: 24 * 60 * 60 * 1000, // 1 day
+    sameSite: 'strict',
+  }
+}))
+
+
 
 export default app;
