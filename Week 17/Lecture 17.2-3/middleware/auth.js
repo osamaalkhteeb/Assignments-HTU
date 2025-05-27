@@ -3,9 +3,18 @@ import jwt from "jsonwebtoken";
 
 export const authenticate = async (req, res, next) => {
   try {
-    const authHeader = req.headers["authorization"];
-    const token = authHeader?.split(" ")[1];
+    if (req.session.authenticated && req.session.userId) {
+      const user = await UserModel.findById(req.session.userId);
+      if (user) {
+        req.user = user;
+        return next();
+      }
+    }
 
+    // const authHeader = req.headers["authorization"];
+    // const token = authHeader?.split(" ")[1];
+
+    const token = req.cookies.token
     if (!token) {
       throw new Error("Authentication token missing");
     }
@@ -17,6 +26,9 @@ export const authenticate = async (req, res, next) => {
       throw new Error("User not found");
     }
 
+    //Renew session
+    req.session.userId = user.id;
+    req.session.authenticated = true;
     req.user = user;
 
     next();
@@ -26,7 +38,7 @@ export const authenticate = async (req, res, next) => {
   }
 };
 
-export const authorize = (role = []) => {
+export const authorize = (roles = []) => {
   return (req, res, next) => {
     if (roles.length && !roles.includes(req.user.role)) {
       const error = new Error("Unauthorized access");
