@@ -25,7 +25,7 @@ const Usermodel = {
 
   async findById(id) {
     const { rows } = await query(
-      "SELECT id, email, name FROM users WHERE id = $1",
+      "SELECT id, email, username FROM users WHERE id = $1", // Changed name to username to match the create method
       [id]
     );
     return rows[0];
