@@ -37,7 +37,7 @@ const AuthController = {
 
       const token = Usermodel.generateToken(user.id); // we generate a jwt token for the user when he logs in
 
-      req.session.userId = user.id; //this cones from the app.js
+      req.session.userId = user.id; //this comes from the app.js
 
       res.json({ success: true, token, user });
     } catch (error) {
@@ -47,8 +47,9 @@ const AuthController = {
 
   async me(req, res, next) {
     try {
-      const user = await Usermodel.findByid(req.user.id); // we get the req.user.id from the auth middleware line 14
+      const user = await Usermodel.findById(req.user.id); // Fixed method name from findByid to findById
       if (!user) throw new Error("User not found");
+      res.json({ success: true, user }); // Added the missing response
     } catch (error) {
       next(error);
     }
