@@ -10,16 +10,26 @@ const AuthController = {
     try {
       const { error, value } = registerSchema.validate(req.body);
       if (error) throw new Error(error.details[0].message);
+
       const { email, password, name } = value;
 
       const exsitingUser = await UserModel.findByEmail(email);
       if (exsitingUser) throw new Error("Email already in use"); // the throw error works like a break when its triggered it stops from doing the lines after it
 
       const newUser = await UserModel.create({ email, password, name });
+    
+
+      req.session.userId = newUser.id;
+      req.session.authenticated = true;
+
       const token = UserModel.generateToken(newUser.id);
 
-      req.session.userId = user.id; //why did we use user not newUser?
-      req.session.authenticated = true;
+      res.cookie("token", token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        maxAge: 24 * 60 * 60 * 1000, // 1 day
+        sameSite: "strict",
+      });
 
       res.status(201).json({
         success: true,
@@ -28,7 +38,7 @@ const AuthController = {
           id: newUser.id,
           name: newUser.name,
           email: newUser.email,
-          createdAt: user.created_at,
+          createdAt: newUser.created_at,
         },
       });
     } catch (error) {
