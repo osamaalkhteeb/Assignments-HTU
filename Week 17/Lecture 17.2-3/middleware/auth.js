@@ -15,6 +15,7 @@ export const authenticate = async (req, res, next) => {
     // const token = authHeader?.split(" ")[1];
 
     const token = req.cookies.token
+    
     if (!token) {
       throw new Error("Authentication token missing");
     }

@@ -29,18 +29,6 @@ app.use(morgan(process.env.NODE_ENV === "production" ? "combined" : "dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Routes
-app.use('/api/auth', authRoutes);
-
-// Health check
-app.get('/health', (req, res) => res.json({ status: 'OK' }));
-
-// Error handling
-app.use(notFound);
-app.use(errorHandler);
-
-
-
 
 app.use(cookieParser())
 
@@ -55,6 +43,20 @@ app.use(session({
     sameSite: 'strict',
   }
 }))
+
+// Routes
+app.use('/api/auth', authRoutes);
+
+// Health check
+app.get('/health', (req, res) => res.json({ status: 'OK' }));
+
+// Error handling
+app.use(notFound);
+app.use(errorHandler);
+
+
+
+
 
 
 
